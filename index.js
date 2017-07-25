@@ -9,9 +9,19 @@ let dayOfYear = chalk.magenta(moment().dayOfYear());
 
 let secondsinDay = chalk.green(moment().format("ssss"));
 
-let daylightSavings = chalk.yellow(moment().isDST());
+let daylightSavings;
+if (moment().isDST() === true){
+  daylightSavings = 'is';
+} else {
+  daylightSavings = 'is not';
+}
 
-let leapYear = chalk.red(moment().isLeapYear());
+let leapYear;
+if (moment().isLeapYear() === true){
+  (leapYear) = "is";
+} else {
+  (leapYear) = "is not";
+};
 
 
 console.log(`
